@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Access Transport Company</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="header-flex">
+        <div class="header-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
+            <span id="access-measure" class="logo-blue">Access </span>
+            <span class="logo-blue">Transport </span>
+            <span class="logo-company">Company</span>
+          </div>
+          <div>
+            <div class="header-tagline-row">
+              <span class="header-tagline-line header-tagline-line-left"></span><span id="header-tagline" class="header-tagline">With us you are satisfied</span><span class="header-tagline-line header-tagline-line-right"></span>
+            </div>
+          </div>
+      </div>
+      <style>
+      .header-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+        margin-bottom: 1.2rem;
+        margin-left: 2rem;
+      }
+      .header-title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+      .header-title .logo-blue {
+        color: #0a2472;
+      }
+      .header-title .logo-company {
+        color: #5E9330;
+      }
+      .header-tagline {
+        color: #0a2472;
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 0.18rem;
+        margin-bottom: 0.12rem;
+        white-space: nowrap;
+        font-weight: 400;
+        position: relative;
+      }
+      </style>
+      <!-- Hamburger Button -->
+      <button class="copilot-menu-btn" id="openOverlayNav" aria-label="Open navigation menu">
+        <span class="copilot-hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <!-- Sidebar Overlay and Panel -->
+      <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true" style="display:none;"></div>
+      <aside id="sidebarPanel" class="sidebar-panel" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
+        <button class="sidebar-close-btn" id="closeSidebarPanel" aria-label="Close navigation menu">
+          <span class="sidebar-close-x">&times;</span>
+        </button>
+        <nav class="sidebar-nav-links">
+          <a href="index.html" class="sidebar-link home-link"><i class="fa-solid fa-house sidebar-link-icon" style="opacity:0.6;"></i><span>Home</span></a>
+          <a href="about.html" class="sidebar-link about-link"><i class="fa-regular fa-circle-question sidebar-link-icon"></i><span>About</span></a>
+          <a href="#services" class="sidebar-link services-link"><i class="fa-regular fa-calendar sidebar-link-icon"></i><span>Services</span></a>
+          <a href="contact.html" class="sidebar-link contact-link"><i class="fa-regular fa-envelope sidebar-link-icon"></i><span>Contact</span></a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-footer-top">
+            <a href="#" class="sidebar-footer-link">Terms</a>
+            <a href="#" class="sidebar-footer-link">Privacy</a>
+          </div>
+          <div class="sidebar-footer-bottom">
+            <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AccessTranspor3" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </aside>
+      </div>
+    </nav>
+  </header>
+  <main>
+
+    <!-- Vehicle Listing Grid Section -->
+    <section id="vehicle-listing" style="margin:3.5rem 0 3.5rem 0;">
+      <div style="text-align:center;margin-bottom:0.7rem;">
+        <span style="color:#5E9330;font-size:0.85rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;">WHAT WE OFFER</span>
+      </div>
+      <h2 style="text-align:center;font-size:2.5rem;font-weight:700;color:#222;margin-bottom:2.2rem;">Explore Our Vehicles</h2>
+      <div class="vehicle-listing-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;max-width:1100px;margin:0 auto;">
+      </div>
+    </section>
+    <style>
+      .vehicle-listing-grid .vehicle-card {
+        background:#fff;
+        border:1px solid #e5e7eb;
+        border-radius:0.7rem;
+        overflow:hidden;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        box-shadow:0 1px 4px rgba(0,0,0,0.06);
+        transition:box-shadow 0.25s cubic-bezier(.4,2,.3,1),transform 0.22s cubic-bezier(.4,2,.3,1);
+        min-width:260px;
+        max-width:320px;
+        width:100%;
+        height:370px;
+        position:relative;
+      }
+      .vehicle-listing-grid .vehicle-card:hover {
+        transform:translateY(-18px) scale(1.03);
+        box-shadow:0 10px 32px rgba(30,41,59,0.18),0 1.5px 4px rgba(0,0,0,0.10);
+        z-index:2;
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const vehicles = [
+          { name: 'Toyota Land Cruiser', type: 'Land Cruiser', img: 'Land cruiser/IMG-20260408-WA0052.jpg' },
+          { name: 'Toyota RAV4', type: 'SUV', img: 'SUV/IMG-20260408-WA0003.jpg' },
+          { name: 'BMW', type: 'Luxury Car', img: 'Luxury Car/IMG-20260408-WA0054.jpg' },
+          { name: 'Toyota Hiace', type: 'Van', img: 'Van/IMG-20260408-WA0018.jpg' },
+          { name: 'Toyota Pickup', type: 'Pick Up', img: 'Pick up/IMG-20260408-WA0041.jpg' },
+          { name: 'Toyota Coaster', type: 'coaster', img: 'Coaster/IMG-20260408-WA0079.jpg' },
+          { name: ' Hyundai Bus', type: 'Bus', img: 'Bus/IMG-20260408-WA0045.jpg' },
+          { name: 'small car', type: 'hybrid', img: 'Small car/IMG-20260408-WA0036.jpg' },
+        ];
+        const grid = document.querySelector('.vehicle-listing-grid');
+        if (grid) {
+          vehicles.forEach(v => {
+            const card = document.createElement('div');
+            card.className = 'vehicle-card';
+            card.style = 'background:#fff;border:1px solid #e5e7eb;border-radius:0.7rem;overflow:hidden;display:flex;flex-direction:column;align-items:center;box-shadow:0 1px 4px rgba(0,0,0,0.06);transition:box-shadow 0.25s cubic-bezier(.4,2,.3,1),transform 0.22s cubic-bezier(.4,2,.3,1);min-width:260px;max-width:320px;width:100%;height:370px;position:relative;';
+            const img = document.createElement('img');
+            img.src = v.img;
+            img.alt = v.name;
+            img.style = 'width:100%;height:60%;object-fit:cover;background:#f3f3f3;';
+            card.appendChild(img);
+            const name = document.createElement('div');
+            name.textContent = v.name;
+            name.style = 'font-weight:700;color:#222;font-size:1.13rem;margin-top:1.1rem;';
+            card.appendChild(name);
+            const type = document.createElement('div');
+            type.textContent = v.type;
+            type.style = 'font-size:0.97rem;color:#888;margin-bottom:1.1rem;';
+            card.appendChild(type);
+            const btnRow = document.createElement('div');
+            btnRow.style = 'display:flex;gap:0.7rem;margin-top:auto;margin-bottom:1.2rem;';
+            const bookBtn = document.createElement('a');
+            bookBtn.href = 'contact.html';
+            bookBtn.textContent = 'Book Now';
+            bookBtn.style = 'background:#5E9330;color:#fff;font-weight:600;padding:0.5rem 1.2rem;border:none;border-radius:0.4rem;font-size:1rem;box-shadow:0 1px 3px rgba(94,147,48,0.08);text-decoration:none;transition:background 0.18s;';
+            bookBtn.onmouseenter = () => bookBtn.style.background = '#497324';
+            bookBtn.onmouseleave = () => bookBtn.style.background = '#5E9330';
+            const detailsBtn = document.createElement('a');
+            detailsBtn.href = 'contact.html';
+            detailsBtn.textContent = 'Details';
+            detailsBtn.style = 'background:#fff;color:#222;font-weight:600;padding:0.5rem 1.2rem;border:1.5px solid #222;border-radius:0.4rem;font-size:1rem;text-decoration:none;transition:background 0.18s;';
+            detailsBtn.onmouseenter = () => { detailsBtn.style.background = '#222'; detailsBtn.style.color = '#fff'; };
+            detailsBtn.onmouseleave = () => { detailsBtn.style.background = '#fff'; detailsBtn.style.color = '#222'; };
+            btnRow.appendChild(bookBtn);
+            btnRow.appendChild(detailsBtn);
+            card.appendChild(btnRow);
+            grid.appendChild(card);
+          });
+        }
+      });
+    </script>
+
+  </main>
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-col footer-blurb" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
+        <span class="footer-anim-left"><h3>Access Transport Company</h3></span>
+        <span class="footer-anim-left"><p>Efficient, sustainable logistics and transport solutions for businesses and communities across the region.</p></span>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
+        <span class="footer-anim-up"><h4>Services</h4></span>
+        <ul>
+          <li><span class="footer-anim-up"><a href="#services">Freight Delivery</a></span></li>
+          <li><span class="footer-anim-up"><a href="#services">Green Logistics</a></span></li>
+          <li><span class="footer-anim-up"><a href="#services">Fleet Rental</a></span></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="240">
+        <span class="footer-anim-down"><h4>Company</h4></span>
+        <ul>
+          <li><span class="footer-anim-down"><a href="about.html">About Us</a></span></li>
+          <li><span class="footer-anim-down"><a href="about.html">Our Values</a></span></li>
+          <li><span class="footer-anim-down"><a href="about.html">Careers</a></span></li>
+          <li><span class="footer-anim-down"><a href="customers.html">Customer Overview</a></span></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="360">
+        <span class="footer-anim-right"><h4>Contact</h4></span>
+        <ul>
+          <li><span class="footer-anim-right"><a href="contact.html">Contact Us</a></span></li>
+          <li><span class="footer-anim-right"><a href="mailto:brianmugisharubera@gmail.com">Email Us</a></span></li>
+        </ul>
+        <ul style="margin-top:1.2rem;">
+          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Privacy Policy</a></span></li>
+          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Terms &amp; Conditions</a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-social" style="display:flex;justify-content:flex-end;gap:1.1rem;margin-bottom:0.2rem;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="480">
+      <span class="footer-social-label">Social Media</span>
+      <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+       <a href="https://x.com/AccessTranspor3" aria-label="Twitter" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-bottom" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">
+      &copy; Access Transport Company.
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: false });
+  </script>
+<script> const footer = document.querySelector('.main-footer'); const footerObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { footer.classList.add('footer-visible'); } else { footer.classList.remove('footer-visible'); } }); }, { threshold: 0.1 }); footerObserver.observe(footer); </script>
+</body>
+</html>

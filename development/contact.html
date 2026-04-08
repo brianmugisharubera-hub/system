@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <meta name="description" content="Contact Access Transport Company for efficient, sustainable logistics and transport solutions in Kigali and beyond.">
+  <meta name="keywords" content="contact, transport, logistics, delivery, green, Kigali, Rwanda, company, sustainable, fleet, business">
+  <meta property="og:title" content="Contact | Access Transport Company">
+  <meta property="og:description" content="Contact us for efficient, sustainable logistics and transport solutions for businesses and communities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/contact.html">
+  <meta property="og:image" content="/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Access Transport Company</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      background: none;
+      color: #fff;
+    }
+    .contact-section-card {
+      background: rgba(10, 20, 30, 0.85);
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+      padding: 2.5rem 2rem 2.5rem 2rem;
+      margin: 3rem auto 3rem auto;
+      max-width: 1000px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      gap: 0;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .main-footer {
+      border-top: 2px solid rgba(255,255,255,0.3);
+    }
+    .contact-info {
+      flex: 1 1 320px;
+      min-width: 260px;
+      margin-right: 0;
+      padding: 2.5rem 2rem 2.5rem 2rem;
+    }
+    .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .contact-info p {
+      font-size: 1.1rem;
+      margin-bottom: 2.2rem;
+      color: #fff;
+    }
+    .contact-info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .contact-info-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.3rem;
+      font-size: 1.08rem;
+      color: #fff;
+    }
+    .contact-info-list .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.1rem;
+      height: 2.1rem;
+      margin-right: 1rem;
+      font-size: 1.3rem;
+      background: rgba(255,255,255,0.12);
+      border-radius: 50%;
+      color: #fff;
+    }
+    .contact-form-box {
+      flex: 1 1 340px;
+      min-width: 280px;
+      padding: 2.5rem 2rem 2.5rem 2rem;
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+          /* Vertical divider */
+        
+        .contact-main .vertical-divider {
+          width: 1px;
+          background: #5E9330;
+          height: 80%;
+          min-height: 220px;
+          align-self: center;
+          margin: 0 0;
+        }
+    .contact-form-box h3 {
+      color: #fff;
+      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+    .contact-form label {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: #fff;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.7rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 1rem;
+      background: #1e2a3a;
+      color: #ffffff;
+      margin-bottom: 0.2rem;
+      resize: none;
+    }
+    .contact-form textarea {
+      min-height: 110px;
+      max-width: 100%;
+    }
+    .contact-form button {
+      background: #5E9330;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.8rem 2.2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .contact-form button:hover {
+      background: #406622;
+    }
+    @media (max-width: 900px) {
+      .contact-main {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem 0.5rem;
+      }
+      .contact-info, .contact-form-box {
+        margin-right: 0;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="header-flex">
+        <div class="header-title" data-aos="fade-right" data-aos-duration="900">
+            <span id="access-measure" class="logo-blue">Access </span>
+            <span class="logo-blue">Transport </span>
+            <span class="logo-company">Company</span>
+          </div>
+          <div>
+            <div class="header-tagline-row">
+              <span class="header-tagline-line header-tagline-line-left"></span><span id="header-tagline" class="header-tagline">With us you are satisfied</span><span class="header-tagline-line header-tagline-line-right"></span>
+            </div>
+          </div>
+      </div>
+      <style>
+      .header-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+        margin-bottom: 1.2rem;
+        margin-left: 2rem;
+      }
+      .header-title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+      .header-title .logo-blue {
+        color: #0a2472;
+      }
+      .header-title .logo-company {
+        color: #5E9330;
+      }
+      .header-tagline {
+        color: #0a2472;
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 0.18rem;
+        margin-bottom: 0.12rem;
+        white-space: nowrap;
+        font-weight: 400;
+        position: relative;
+      }
+      </style>
+      <!-- Hamburger Button -->
+      <button class="copilot-menu-btn" id="openOverlayNav" aria-label="Open navigation menu">
+        <span class="copilot-hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <!-- Sidebar Overlay and Panel -->
+      <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true" style="display:none;"></div>
+      <aside id="sidebarPanel" class="sidebar-panel" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
+        <button class="sidebar-close-btn" id="closeSidebarPanel" aria-label="Close navigation menu">
+          <span class="sidebar-close-x">&times;</span>
+        </button>
+        <nav class="sidebar-nav-links">
+          <a href="index.html" class="sidebar-link home-link"><i class="fa-solid fa-house sidebar-link-icon" style="opacity:0.6;"></i><span>Home</span></a>
+          <a href="about.html" class="sidebar-link about-link"><i class="fa-regular fa-circle-question sidebar-link-icon"></i><span>About</span></a>
+          <a href="#services" class="sidebar-link services-link"><i class="fa-regular fa-calendar sidebar-link-icon"></i><span>Services</span></a>
+          <a href="contact.html" class="sidebar-link contact-link active"><i class="fa-regular fa-envelope sidebar-link-icon"></i><span>Contact</span></a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-footer-top">
+            <a href="#" class="sidebar-footer-link">Terms</a>
+            <a href="#" class="sidebar-footer-link">Privacy</a>
+          </div>
+          <div class="sidebar-footer-bottom">
+            <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AccessTranspor3" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </aside>
+    </nav>
+  </header>
+  <main role="main">
+    <div class="contact-section-card" data-aos="fade-up" style="margin-top:0;padding-top:0;">
+      <div class="contact-main">
+        <div class="contact-info" data-aos="fade-right">
+          <h2>Get in touch</h2>
+          <p>We'd love to hear from you! Reach out for quotes, questions, or partnership opportunities.</p>
+          <ul class="contact-info-list">
+            <li data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000" data-aos-easing="ease-out"><span class="icon"><i class="fa-solid fa-location-dot" style="color:#5E9330;"></i></span> kicukiro, sonatube KK 506 st</li>
+            <li data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-out"><span class="icon"><i class="fa-solid fa-phone" style="color:#5E9330;"></i></span> (+250) 788309931</li>
+            <li data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-out"><span class="icon"><i class="fa-solid fa-envelope" style="color:#5E9330;"></i></span> nkfelicien@gmail.com</li>
+          </ul>
+        </div>
+        <div class="vertical-divider"></div>
+        <div class="contact-form-box">
+          <h3 data-aos="fade-down" data-aos-delay="0">Contact Form</h3>
+          <!--
+            To activate your form:
+            1. Go to https://formspree.io/f/your-form-id (replace with your real Formspree form ID after signup)
+            2. Enter your email and confirm it.
+            3. Replace 'your-form-id' below with your actual Formspree form ID.
+          -->
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mgopzlvq" method="POST" autocomplete="off">
+            <label for="fullname" data-aos="fade-left" data-aos-delay="300">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Your full name" data-aos="fade-left" data-aos-delay="400">
+            <span id="name-error" style="color:#ffb3b3; font-size:0.98rem; display:none;">Please enter your full name.</span>
+            <label for="email" data-aos="fade-left" data-aos-delay="500">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Your email address" data-aos="fade-left" data-aos-delay="600">
+            <span id="email-error" style="color:#ffb3b3; font-size:0.98rem; display:none;">Please enter a valid email address.</span>
+            <label for="message" data-aos="fade-left" data-aos-delay="700">Message</label>
+            <textarea id="message" name="message" required placeholder="Enter your message" data-aos="fade-left" data-aos-delay="800"></textarea>
+            <span id="message-error" style="color:#ffb3b3; font-size:0.98rem; display:none;">Please enter your message.</span>
+            <button type="submit" data-aos="fade-up" data-aos-delay="900">Send</button>
+            <div id="formMessage" style="margin-top:1rem;font-size:1.1rem;color:#5E9330;display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    AOS.init({ once: true });
+    // Contact form validation and Formspree AJAX submit
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      const nameInput = document.getElementById('fullname');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+      const nameError = document.getElementById('name-error');
+      const emailError = document.getElementById('email-error');
+      const messageError = document.getElementById('message-error');
+      const formMessage = document.getElementById('formMessage');
+      function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+      form.addEventListener('submit', function(e) {
+        let valid = true;
+        // Name validation
+        if (!nameInput.value.trim()) {
+          nameError.style.display = 'block';
+          valid = false;
+        } else {
+          nameError.style.display = 'none';
+        }
+        // Email validation
+        if (!validateEmail(emailInput.value.trim())) {
+          emailError.style.display = 'block';
+          valid = false;
+        } else {
+          emailError.style.display = 'none';
+        }
+        // Message validation
+        if (!messageInput.value.trim()) {
+          messageError.style.display = 'block';
+          valid = false;
+        } else {
+          messageError.style.display = 'none';
+        }
+        if (!valid) {
+          e.preventDefault();
+          return;
+        }
+        // AJAX submit to Formspree
+        e.preventDefault();
+        formMessage.style.display = 'block';
+        formMessage.style.color = '#5E9330';
+        formMessage.textContent = 'Sending...';
+        fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: new FormData(form)
+        }).then(response => {
+          if (response.ok) {
+            formMessage.textContent = 'Thank you! Your message was sent.';
+            form.reset();
+          } else {
+            response.json().then(data => {
+              formMessage.textContent = data.error || 'Oops! There was a problem sending your message.';
+              formMessage.style.color = '#c0392b';
+            }).catch(() => {
+              formMessage.textContent = 'Oops! There was a problem sending your message.';
+              formMessage.style.color = '#c0392b';
+            });
+          }
+        }).catch(() => {
+          formMessage.textContent = 'Oops! There was a problem sending your message.';
+          formMessage.style.color = '#c0392b';
+        });
+      });
+    });
+  </script>
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-col footer-blurb" data-aos="fade-right" data-aos-duration="800">
+        <span class="footer-anim-left"><h3>Access Transport Company</h3></span>
+        <span class="footer-anim-left"><p>Efficient, sustainable logistics and transport solutions for businesses and communities across the region.</p></span>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+        <span class="footer-anim-up"><h4>Services</h4></span>
+        <ul>
+          <li><span class="footer-anim-up"><a href="#services">Freight Delivery</a></span></li>
+          <li><span class="footer-anim-up"><a href="#services">Green Logistics</a></span></li>
+          <li><span class="footer-anim-up"><a href="#services">Fleet Rental</a></span></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+        <span class="footer-anim-down"><h4>Company</h4></span>
+        <ul>
+          <li><span class="footer-anim-down"><a href="#about">About Us</a></span></li>
+          <li><span class="footer-anim-down"><a href="#about">Our Values</a></span></li>
+          <li><span class="footer-anim-down"><a href="#about">Careers</a></span></li>
+          <li><span class="footer-anim-down"><a href="#customer-overview">Customer Overview</a></span></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+        <span class="footer-anim-right"><h4>Contact</h4></span>
+        <ul>
+          <li><span class="footer-anim-right"><a href="contact.html">Contact Us</a></span></li>
+          <li><span class="footer-anim-right"><a href="mailto:brianmugisharubera@gmail.com">Email Us</a></span></li>
+        </ul>
+        <ul style="margin-top:1.2rem;">
+          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Privacy Policy</a></span></li>
+          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Terms &amp; Conditions</a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-social" style="display:flex;justify-content:flex-end;gap:1.1rem;margin-bottom:0.2rem;" data-aos="fade-left" data-aos-delay="400">
+      <span class="footer-social-label">Social Media</span>
+      <a href="https://facebook.com" aria-label="Facebook" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" aria-label="Twitter" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://instagram.com" aria-label="Instagram" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500">
+      &copy; Access Transport Company.
+    </div>
+  </footer>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script> const footer = document.querySelector('.main-footer'); const footerObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { footer.classList.add('footer-visible'); } else { footer.classList.remove('footer-visible'); } }); }, { threshold: 0.1 }); footerObserver.observe(footer); </script>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="Access Transport Company offers efficient, sustainable logistics and transport solutions in Kigali and beyond.">
+  <meta name="keywords" content="transport, logistics, delivery, green, Kigali, Rwanda, company, sustainable, fleet, business">
+  <meta property="og:title" content="Access Transport Company">
+  <meta property="og:description" content="Efficient, sustainable logistics and transport solutions for businesses and communities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:image" content="/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Access Transport Company</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="header-flex">
+        <div class="header-title" data-aos="fade-right" data-aos-duration="900">
+                <span id="access-measure" class="logo-blue">Access </span>
+                <span class="logo-blue">Transport </span>
+                <span class="logo-company">Company</span>
+              </div>
+              <div>
+                <div class="header-tagline-row">
+                  <span class="header-tagline-line header-tagline-line-left"></span><span id="header-tagline" class="header-tagline">With us you are satisfied</span><span class="header-tagline-line header-tagline-line-right"></span>
+                </div>
+              </div>
+      </div>
+      <style>
+      .header-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+        margin-bottom: 1.2rem;
+        margin-left: 2rem;
+      }
+      .header-title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+      .header-title .logo-blue {
+        color: #0a2472;
+      }
+      .header-title .logo-company {
+        color: #5E9330;
+      }
+      .header-tagline {
+        color: #0a2472;
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 0.18rem;
+        margin-bottom: 0.12rem;
+        white-space: nowrap;
+        font-weight: 400;
+        position: relative;
+      }
+      </style>
+      <button class="copilot-menu-btn" id="openOverlayNav" aria-label="Open navigation menu">
+        <span class="copilot-hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <!-- Sidebar Overlay and Panel -->
+      <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true" style="display:none;"></div>
+      <aside id="sidebarPanel" class="sidebar-panel" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
+        <button class="sidebar-close-btn" id="closeSidebarPanel" aria-label="Close navigation menu">
+          <span class="sidebar-close-x">&times;</span>
+        </button>
+        <nav class="sidebar-nav-links">
+          <a href="index.html" class="sidebar-link home-link"><i class="fa-solid fa-house sidebar-link-icon" style="opacity:0.6;"></i><span>Home</span></a>
+          <a href="about.html" class="sidebar-link about-link active"><i class="fa-regular fa-circle-question sidebar-link-icon"></i><span>About</span></a>
+          <a href="#services" class="sidebar-link services-link"><i class="fa-regular fa-calendar sidebar-link-icon"></i><span>Services</span></a>
+          <a href="contact.html" class="sidebar-link contact-link"><i class="fa-regular fa-envelope sidebar-link-icon"></i><span>Contact</span></a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-footer-top">
+            <a href="#" class="sidebar-footer-link">Terms</a>
+            <a href="#" class="sidebar-footer-link">Privacy</a>
+          </div>
+          <div class="sidebar-footer-bottom">
+            <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AccessTranspor3" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </aside>
+    </header>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const openSidebarBtn = document.getElementById('openOverlayNav');
+      const closeSidebarBtn = document.getElementById('closeSidebarPanel');
+      const sidebarPanel = document.getElementById('sidebarPanel');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+      const sidebarLinks = sidebarPanel ? sidebarPanel.querySelectorAll('.sidebar-link') : [];
+
+      function openSidebar() {
+        if (sidebarPanel && sidebarOverlay) {
+          sidebarOverlay.style.display = 'block';
+          sidebarPanel.style.display = 'flex';
+          setTimeout(() => {
+            sidebarOverlay.classList.add('open');
+            sidebarPanel.classList.add('open');
+          }, 10);
+          document.body.style.overflow = 'hidden';
+          sidebarPanel.focus();
+        }
+      }
+      function closeSidebar() {
+        if (sidebarPanel && sidebarOverlay) {
+          sidebarOverlay.classList.remove('open');
+          sidebarPanel.classList.remove('open');
+          setTimeout(() => {
+            sidebarOverlay.style.display = 'none';
+            sidebarPanel.style.display = 'none';
+          }, 300);
+          document.body.style.overflow = '';
+          openSidebarBtn && openSidebarBtn.focus();
+        }
+      }
+      if (openSidebarBtn) openSidebarBtn.addEventListener('click', openSidebar);
+      if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+      if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+      if (sidebarPanel) {
+        sidebarPanel.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') closeSidebar();
+        });
+      }
+    });
+    </script>
+    </nav>
+  </header>
+  <main role="main">
+    <section style="width:100%;min-height:60vh;display:flex;align-items:flex-start;justify-content:flex-start;text-align:left;background:linear-gradient(135deg,#1a3a0a 0%,#2d5a12 100%);padding:0;overflow:hidden;box-sizing:border-box;">
+      <div style="width:100%;box-sizing:border-box;background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('in.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 2rem;">
+        <h1 style="font-family:'Inter',Arial,sans-serif;font-weight:800;font-size:3.5rem;letter-spacing:2px;color:#fff;margin-bottom:1rem;" data-aos="fade-down" data-aos-duration="900">Access Transport Company</h1>
+        <p style="font-size:1.2rem;color:#fff;opacity:0.85;" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">Delivering smooth, safe, and reliable transport experiences every day, with a strong focus on comfort, efficiency, and customer satisfaction.</p>
+      </div>
+    </section>
+    <section class="journey-timeline-section" style="width:100%;background:#fff;padding:4.5rem 0 4.5rem 0;">
+      <!-- Our Journey So Far section moved below -->
+    <section style="width:100%;background:#fff;text-align:center;padding:5rem 2rem 5rem 2rem;">
+      <h2 style="color:#5E9330;font-family:'Inter',Arial,sans-serif;font-weight:800;font-size:2.8rem;text-align:center;margin-bottom:2.2rem;" data-aos="fade-down" data-aos-duration="900">We Drive Your Journey Forward</h2>
+      <p style="max-width:600px;margin:0 auto;line-height:2.4;font-size:1.15rem;color:#444;text-align:center;" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">Premium car rental services for business and leisure. From economy to luxury 4x4s, our modern fleet is ready to take you anywhere in comfort and style.</p>
+    </section>
+
+    <section class="journey-timeline-section" style="width:100%;background:#fff;padding:4.5rem 0 4.5rem 0;">
+      <h2 style="color:#5E9330;font-family:'Inter',Arial,sans-serif;font-weight:800;font-size:2.3rem;text-align:center;margin-bottom:3.2rem;">Our Journey So Far</h2>
+      <div class="timeline-container" style="display:flex;justify-content:center;">
+        <div class="timeline-vertical" style="position:relative;display:flex;flex-direction:column;align-items:flex-start;">
+          <div style="position:relative;min-height:420px;padding-left:48px;">
+            <!-- Vertical dashed line -->
+            <div style="position:absolute;left:16px;top:0;bottom:0;width:0;border-left:3px dashed #5E9330;z-index:0;"></div>
+            <!-- Milestone 1 -->
+            <div data-aos="fade-up" data-aos-delay="0" style="display:flex;align-items:flex-start;margin-bottom:3.5rem;position:relative;">
+              <div style="position:absolute;left:7px;top:10px;width:18px;height:18px;border:3px solid #5E9330;background:#fff;border-radius:50%;z-index:1;"></div>
+              <div style="margin-left:38px;max-width:520px;">
+                <div style="font-weight:700;color:#222;font-size:1.15rem;margin-bottom:0.5rem;"> The Beginning</div>
+                  <div style="color:#666;font-size:1rem;line-height:1.8;">Access Transport Company was founded in Kigali with a small fleet and a big vision. We started serving local businesses with reliable and affordable transport solutions.</div>
+              </div>
+            </div>
+            <!-- Milestone 2 -->
+            <div data-aos="fade-up" data-aos-delay="200" style="display:flex;align-items:flex-start;margin-bottom:3.5rem;position:relative;">
+              <div style="position:absolute;left:7px;top:10px;width:18px;height:18px;border:3px solid #5E9330;background:#fff;border-radius:50%;z-index:1;"></div>
+              <div style="margin-left:38px;max-width:520px;">
+                <div style="font-weight:700;color:#222;font-size:1.15rem;margin-bottom:0.5rem;"> Growing Our Fleet</div>
+                  <div style="color:#666;font-size:1rem;line-height:1.8;">We expanded our fleet to include luxury vehicles, 4x4s, vans and pickups. Our client base grew significantly as word spread about our quality of service and commitment to punctuality.</div>
+              </div>
+            </div>
+            <!-- Milestone 3 -->
+            <div data-aos="fade-up" data-aos-delay="400" style="display:flex;align-items:flex-start;position:relative;">
+              <div style="position:absolute;left:7px;top:10px;width:18px;height:18px;border:3px solid #5E9330;background:#fff;border-radius:50%;z-index:1;"></div>
+              <div style="margin-left:38px;max-width:520px;">
+                <div style="font-weight:700;color:#222;font-size:1.15rem;margin-bottom:0.5rem;"> Serving Hundreds</div>
+                  <div style="color:#666;font-size:1rem;line-height:1.8;">Today we proudly serve hundreds of businesses and individuals across Rwanda. We continue to invest in our fleet and team to deliver the best transport experience possible.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="width:100%;background:#fff;display:flex;flex-direction:row;justify-content:center;align-items:flex-start;padding:5rem 2rem 5rem 2rem;box-sizing:border-box;gap:3rem;">
+              <div style="flex:0 0 40%;max-width:420px;min-width:220px;display:flex;align-items:flex-start;">
+                <h2 style="color:#5E9330;font-size:2.5rem;font-weight:800;text-align:left;margin:0;">We Stand For</h2>
+              </div>
+              <div style="flex:1 1 60%;max-width:700px;min-width:240px;display:flex;flex-direction:column;gap:2.2rem;">
+                <div data-aos="fade-up" data-aos-delay="0" style="display:flex;align-items:flex-start;gap:1.1rem;">
+                  <span style="font-size:2.5rem;line-height:1;">🚗</span>
+                  <div>
+                    <div style="font-weight:700;color:#222;font-size:1.18rem;">Reliability</div>
+                    <div style="color:#666;font-size:1rem;margin-top:0.3rem;">We ensure every vehicle is ready and every journey is on time, every time.</div>
+                  </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="150" style="display:flex;align-items:flex-start;gap:1.1rem;">
+                  <span style="font-size:2.5rem;line-height:1;">💡</span>
+                  <div>
+                    <div style="font-weight:700;color:#222;font-size:1.18rem;">Innovation</div>
+                    <div style="color:#666;font-size:1rem;margin-top:0.3rem;">We constantly improve our fleet and service to meet the needs of modern travelers.</div>
+                  </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" style="display:flex;align-items:flex-start;gap:1.1rem;">
+                  <span style="font-size:2.5rem;line-height:1;">🌍</span>
+                  <div>
+                    <div style="font-weight:700;color:#222;font-size:1.18rem;">Sustainability</div>
+                    <div style="color:#666;font-size:1rem;margin-top:0.3rem;">We are committed to green logistics and reducing our environmental footprint.</div>
+                  </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="450" style="display:flex;align-items:flex-start;gap:1.1rem;">
+                  <span style="font-size:2.5rem;line-height:1;">🤝</span>
+                  <div>
+                    <div style="font-weight:700;color:#222;font-size:1.18rem;">Customer First</div>
+                    <div style="color:#666;font-size:1rem;margin-top:0.3rem;">Every decision we make is focused on delivering the best experience for our clients.</div>
+                  </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="600" style="display:flex;align-items:flex-start;gap:1.1rem;">
+                  <span style="font-size:2.5rem;line-height:1;">💪</span>
+                  <div>
+                    <div style="font-weight:700;color:#222;font-size:1.18rem;">Resilience</div>
+                    <div style="color:#666;font-size:1rem;margin-top:0.3rem;">We face every challenge head on and keep our service running smoothly no matter what.</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+  </main>
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-col footer-blurb" data-aos="fade-right" data-aos-duration="1200">
+        <span class="footer-anim-left"><h3>Access Transport Company</h3></span>
+        <span class="footer-anim-left"><p>Efficient, sustainable logistics and transport solutions for businesses and communities across the region.</p></span>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+        <span class="footer-anim-up"><h4>Services</h4></span>
+        <ul>
+          <li><span class="footer-anim-up"><a href="#services">Freight Delivery</a></span></li>
+          <li><span class="footer-anim-up"><a href="#services">Green Logistics</a></span></li>
+          <li><span class="footer-anim-up"><a href="#services">Fleet Rental</a></span></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+        <span class="footer-anim-down"><h4>Company</h4></span>
+        <ul>
+          <li><span class="footer-anim-down"><a href="about.html">About Us</a></span></li>
+          <li><span class="footer-anim-down"><a href="about.html">Our Values</a></span></li>
+          <li><span class="footer-anim-down"><a href="about.html">Careers</a></span></li>
+          <li><span class="footer-anim-down"><a href="customers.html">Customer Overview</a></span></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+        <span class="footer-anim-right"><h4>Contact</h4></span>
+        <ul>
+          <li><span class="footer-anim-right"><a href="contact.html">Contact Us</a></span></li>
+          <li><span class="footer-anim-right"><a href="mailto:nkfelicien@gmail.com">Email Us</a></span></li>
+        </ul>
+        <ul style="margin-top:1.2rem;">
+          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Privacy Policy</a></span></li>
+          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Terms &amp; Conditions</a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-social" style="display:flex;justify-content:flex-end;gap:1.1rem;margin-bottom:0.2rem;" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="600">
+      <span class="footer-social-label">Social Media</span>
+      <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/AccessTranspor3" aria-label="Twitter" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+      &copy; Access Transport Company.
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+      const footer = document.querySelector('.main-footer');
+      const footerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            footer.classList.add('footer-visible');
+          } else {
+            footer.classList.remove('footer-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      footerObserver.observe(footer);
+    </script>
+  <script defer src="script.js"></script>
+</body>
+</html>
