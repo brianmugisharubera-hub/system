@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: 'Toyota Land Cruiser', type: 'Land Cruiser', img: 'Land cruiser/IMG-20260408-WA0052.jpg' },
       { name: 'Toyota RAV4', type: 'SUV', img: 'SUV/IMG-20260408-WA0003.jpg' },
       { name: 'BMW', type: 'Luxury Car', img: 'Luxury Car/IMG-20260408-WA0054.jpg' },
-      { name: 'Toyota Hiace', type: 'Van', img: 'Van/IMG-20260408-WA0018.jpg' },
+      { name: 'Toyota Hiace', type: 'Van', img: 'VAN/IMG-20260408-WA0018.jpg' },
       { name: 'Toyota Pickup', type: 'Pick Up', img: 'Pick up/IMG-20260408-WA0041.jpg' },
       { name: 'Toyota Coaster', type: 'coaster', img: 'Coaster/IMG-20260408-WA0079.jpg' },
       { name: ' Hyundai Bus', type: 'Bus', img: 'Bus/IMG-20260408-WA0045.jpg' },
