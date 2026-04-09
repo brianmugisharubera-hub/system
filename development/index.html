@@ -120,7 +120,7 @@
         </h1>
         <div class="hero-buttons" data-aos="fade-up" data-aos-delay="120" data-aos-duration="900" style="align-self: flex-start;">
           <a href="services.html" class="simple-services-btn">Our Services</a>
-          <a href="contact.html" class="book-now-btn" style="background:#5E9330;color:#fff;border:none;border-radius:0.5rem;padding:0.8rem 2.2rem;font-size:1.1rem;font-weight:600;margin-left:1rem;display:inline-block;text-align:center;text-decoration:none;transition:background 0.2s;">Book Now</a>
+          <a href="booking.html" class="simple-services-btn book-now-btn">Book Now</a>
           <style>
             @keyframes spin {
               100% { transform: rotate(360deg); }
@@ -134,18 +134,105 @@
       </div>
     </section>
 
-
   </main>
-    
 
     <section style="width:100%;background:#fff;text-align:center;padding:5rem 2rem 5rem 2rem;">
       <h2 style="color:#5E9330;font-family:'Inter',Arial,sans-serif;font-weight:800;font-size:2.8rem;text-align:center;margin-bottom:2.2rem;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">We Drive Your Journey Forward</h2>
       <p style="max-width:600px;margin:0 auto;line-height:2.4;font-size:1.15rem;color:#444;text-align:center;" data-aos="fade-up" data-aos-delay="120" data-aos-duration="900">Premium car rental services for business and leisure. From economy to luxury 4x4s, our modern fleet is ready to take you anywhere in comfort and style.</p>
     </section>
 
-
     <!-- Featured Vehicles Section -->
     <section id="featured-vehicles" style="margin:3.5rem 0 3.5rem 0;">
+      <div style="text-align:center;margin-bottom:0.7rem;">
+        <span style="color:#5E9330;font-size:0.85rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;">WHAT WE OFFER</span>
+      </div>
+      <h2 style="text-align:center;font-size:2.5rem;font-weight:700;color:#222;margin-bottom:2.2rem;">Explore Our Vehicles</h2>
+      <div class="vehicle-carousel-container" style="position:relative;max-width:1100px;margin:0 auto;">
+        <button class="vehicle-carousel-arrow prev" aria-label="Previous" style="position:absolute;left:-3.5rem;top:50%;transform:translateY(-50%);background:#fff;border:1px solid #ddd;border-radius:50%;width:2.7rem;height:2.7rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.07);font-size:1.3rem;z-index:2;cursor:pointer;"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="vehicle-carousel-track" style="display:flex;gap:2rem;overflow-x:scroll;scroll-behavior:auto;padding:0.5rem 0;scrollbar-width:none;-ms-overflow-style:none;">
+              <style>
+                .vehicle-carousel-track::-webkit-scrollbar {
+                  display: none;
+                }
+                .vehicle-carousel-track {
+                  -ms-overflow-style: none;
+                  scrollbar-width: none;
+                }
+              </style>
+          <!-- Vehicle cards will be injected here by JS -->
+        </div>
+        <button class="vehicle-carousel-arrow next" aria-label="Next" style="position:absolute;right:-3.5rem;top:50%;transform:translateY(-50%);background:#fff;border:1px solid #ddd;border-radius:50%;width:2.7rem;height:2.7rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.07);font-size:1.3rem;z-index:2;cursor:pointer;"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="vehicle-carousel-dots" style="display:flex;justify-content:center;gap:0.7rem;margin-top:1.5rem;"></div>
+      </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="our-services-section" style="margin:3.5rem 0 3.5rem 0;">
+      <h2 style="text-align:center;font-size:2.3rem;font-weight:800;color:#1a3c1a;margin-bottom:2.2rem;">Our Services</h2>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2.2rem;max-width:1200px;margin:0 auto 2.5rem auto;">
+        <!-- Card 1: Car Rental -->
+        <div style="flex:1 1 240px;max-width:300px;background:#fff;border-radius:1.2rem;box-shadow:0 2px 16px 0 rgba(39,174,96,0.08);padding:2.1rem 1.5rem 1.5rem 1.5rem;display:flex;flex-direction:column;align-items:center;min-width:220px;">
+          <div style="background:#27ae60;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:1.1rem;">
+            <i class="fa-solid fa-flag"></i>
+          </div>
+          <div style="font-weight:700;font-size:1.18rem;margin-bottom:0.6rem;color:#1a3c1a;text-align:center;">Car Rental</div>
+          <div style="color:#444;font-size:1.04rem;text-align:center;margin-bottom:1.1rem;">Daily, weekly, and monthly rental packages with flexible pickup and special long-term discounts.</div>
+          <ul style="list-style:none;padding:0;margin:0;width:100%;">
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Flexible Pickup</li>
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Discounted Long-Term Rates</li>
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>No Hidden Fees</li>
+          </ul>
+        </div>
+        <!-- Card 2: City & Country Tours -->
+        <div style="flex:1 1 240px;max-width:300px;background:#fff;border-radius:1.2rem;box-shadow:0 2px 16px 0 rgba(39,174,96,0.08);padding:2.1rem 1.5rem 1.5rem 1.5rem;display:flex;flex-direction:column;align-items:center;min-width:220px;">
+          <div style="background:#27ae60;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:1.1rem;">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div style="font-weight:700;font-size:1.18rem;margin-bottom:0.6rem;color:#1a3c1a;text-align:center;">City & Country Tours</div>
+          <div style="color:#444;font-size:1.04rem;text-align:center;margin-bottom:1.1rem;">Guided and self-drive tours to explore Rwanda's cities, countryside, and hidden gems.</div>
+          <ul style="list-style:none;padding:0;margin:0;width:100%;">
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Expert Guides</li>
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Custom Routes</li>
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>All Inclusive</li>
+          </ul>
+        </div>
+        <!-- Card 3: Airport Transfers -->
+        <div style="flex:1 1 240px;max-width:300px;background:#fff;border-radius:1.2rem;box-shadow:0 2px 16px 0 rgba(39,174,96,0.08);padding:2.1rem 1.5rem 1.5rem 1.5rem;display:flex;flex-direction:column;align-items:center;min-width:220px;">
+          <div style="background:#27ae60;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:1.1rem;">
+            <i class="fa-solid fa-shield"></i>
+          </div>
+          <div style="font-weight:700;font-size:1.18rem;margin-bottom:0.6rem;color:#1a3c1a;text-align:center;">Airport Transfers</div>
+          <div style="color:#444;font-size:1.04rem;text-align:center;margin-bottom:1.1rem;">24/7 airport pickup and drop-off services with meet and greet and flight tracking.</div>
+          <ul style="list-style:none;padding:0;margin:0;width:100%;">
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Meet & Greet</li>
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Flight Tracking</li>
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Fixed Pricing</li>
+          </ul>
+        </div>
+        <!-- Card 4: Chauffeur Services -->
+        <div style="flex:1 1 240px;max-width:300px;background:#fff;border-radius:1.2rem;box-shadow:0 2px 16px 0 rgba(39,174,96,0.08);padding:2.1rem 1.5rem 1.5rem 1.5rem;display:flex;flex-direction:column;align-items:center;min-width:220px;">
+          <div style="background:#27ae60;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:1.1rem;">
+            <i class="fa-solid fa-dollar-sign"></i>
+          </div>
+          <div style="font-weight:700;font-size:1.18rem;margin-bottom:0.6rem;color:#1a3c1a;text-align:center;">Chauffeur Services</div>
+          <div style="color:#444;font-size:1.04rem;text-align:center;margin-bottom:1.1rem;">Professional drivers for events, business meetings, and leisure travel in luxury vehicles.</div>
+          <ul style="list-style:none;padding:0;margin:0;width:100%;">
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Licensed Drivers</li>
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Luxury Vehicles</li>
+            <li style="display:flex;align-items:center;color:#27ae60;font-weight:600;font-size:0.98rem;"><i class="fa-solid fa-check" style="margin-right:0.6em;"></i>Event Ready</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Custom Solution Card -->
+      <div style="background:#f8fafb;border-radius:1.1rem;box-shadow:0 2px 12px 0 rgba(39,174,96,0.07);padding:2.2rem 1.5rem 2.2rem 1.5rem;max-width:900px;margin:2.5rem auto 0 auto;display:flex;flex-direction:column;align-items:center;">
+        <div style="font-size:1.25rem;font-weight:700;color:#1a3c1a;margin-bottom:1.1rem;text-align:center;">Need a Custom Solution?</div>
+        <div style="color:#444;font-size:1.07rem;text-align:center;margin-bottom:1.5rem;max-width:600px;">Contact us for tailored transport solutions, business partnerships, or special requests. Our team is ready to help!</div>
+        <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
+          <a href="tel:+250788309931" style="background:#27ae60;color:#fff;font-weight:700;padding:0.85rem 2.2rem;border:none;border-radius:2rem;font-size:1.13rem;box-shadow:0 1px 3px rgba(39,174,96,0.08);text-decoration:none;transition:background 0.18s;">Call Us: +250 788 309 931</a>
+          <a href="contact.html" style="background:#fff;color:#27ae60;font-weight:700;padding:0.85rem 2.2rem;border:2px solid #27ae60;border-radius:2rem;font-size:1.13rem;box-shadow:0 1px 3px rgba(39,174,96,0.04);text-decoration:none;transition:background 0.18s;">Email Us</a>
+        </div>
+      </div>
+    </section>
       <div style="text-align:center;margin-bottom:0.7rem;">
         <span style="color:#5E9330;font-size:0.85rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;">WHAT WE OFFER</span>
       </div>
@@ -218,7 +305,7 @@
         <span class="footer-anim-right"><h4>Contact</h4></span>
         <ul>
           <li><span class="footer-anim-right"><a href="contact.html">Contact Us</a></span></li>
-          <li><span class="footer-anim-right"><a href="mailto:brianmugisharubera@gmail.com">Email Us</a></span></li>
+          <li><span class="footer-anim-right"><a href="mailto:nkfelicien@gmail.com">Email Us</a></span></li>
         </ul>
         <ul style="margin-top:1.2rem;">
           <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Privacy Policy</a></span></li>
@@ -230,7 +317,7 @@
       <span class="footer-social-label">Social Media</span>
       <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
        <a href="https://x.com/AccessTranspor3" aria-label="Twitter" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://linkedin.com" aria-label="LinkedIn" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.linkedin.com/posts/access-transport-co-rwanda-731a60231_hello-rwanda-access-transport-company-came-activity-6912707920904249344-ioZ4" aria-label="LinkedIn" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
     </div>
     <div class="footer-bottom" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">

@@ -23,14 +23,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Featured Vehicles Carousel
     const vehicleData = [
-      { name: 'Toyota Land Cruiser', type: 'Land Cruiser', img: 'Land cruiser/IMG-20260408-WA0052.jpg' },
-      { name: 'Toyota RAV4', type: 'SUV', img: 'SUV/IMG-20260408-WA0003.jpg' },
-      { name: 'BMW', type: 'Luxury Car', img: 'Luxury Car/IMG-20260408-WA0054.jpg' },
-      { name: 'Toyota Hiace', type: 'Van', img: 'VAN/IMG-20260408-WA0018.jpg' },
-      { name: 'Toyota Pickup', type: 'Pick Up', img: 'Pick up/IMG-20260408-WA0041.jpg' },
-      { name: 'Toyota Coaster', type: 'coaster', img: 'Coaster/IMG-20260408-WA0079.jpg' },
-      { name: ' Hyundai Bus', type: 'Bus', img: 'Bus/IMG-20260408-WA0045.jpg' },
-      { name: 'small car', type: 'hybrid', img: 'SmallCar/IMG-20260408-WA0036.jpg' },
+      { name: 'Toyota Land Cruiser', type: 'Land Cruiser', img: 'Land cruiser/IMG-20260408-WA0052.jpg', transmission: 'Automatic', passengers: 7, fuel: 'Diesel' },
+      { name: 'Toyota RAV4', type: 'SUV', img: 'SUV/IMG-20260408-WA0003.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Petrol' },
+      { name: 'BMW', type: 'Luxury Car', img: 'Luxury Car/IMG-20260408-WA0054.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Petrol' },
+      { name: 'Toyota Hiace', type: 'Van', img: 'VAN/IMG-20260408-WA0018.jpg', transmission: 'Manual', passengers: 14, fuel: 'Diesel' },
+      { name: 'Toyota Pickup', type: 'Pick Up', img: 'Pick up/IMG-20260408-WA0041.jpg', transmission: 'Manual', passengers: 5, fuel: 'Diesel' },
+      { name: 'Toyota Coaster', type: 'coaster', img: 'Coaster/IMG-20260408-WA0079.jpg', transmission: 'Manual', passengers: 30, fuel: 'Diesel' },
+      { name: 'Hyundai Bus', type: 'Bus', img: 'Bus/IMG-20260408-WA0045.jpg', transmission: 'Manual', passengers: 45, fuel: 'Diesel' },
+      { name: 'Small Car', type: 'Hybrid', img: 'SmallCar/IMG-20260408-WA0036.jpg', transmission: 'Automatic', passengers: 4, fuel: 'Hybrid' },
     ];
     const cardsToShow = 3;
     let vehicleIndex = 0;
@@ -124,8 +124,18 @@ document.addEventListener('DOMContentLoaded', function () {
         card.appendChild(name);
         const type = document.createElement('div');
         type.textContent = v.type;
-        type.style = 'font-size:0.97rem;color:#888;margin-bottom:1.1rem;';
+        type.style = 'font-size:0.97rem;color:#888;margin-bottom:0.7rem;';
         card.appendChild(type);
+        // Icon badges row
+        const badgeRow = document.createElement('div');
+        badgeRow.className = 'vehicle-badge-row';
+        badgeRow.style = 'display:flex;gap:0.5rem;margin-bottom:1.1rem;';
+        badgeRow.innerHTML = `
+          <span class="vehicle-badge"><i class="fa-solid fa-gears"></i> ${v.transmission}</span>
+          <span class="vehicle-badge"><i class="fa-solid fa-user-group"></i> ${v.passengers}</span>
+          <span class="vehicle-badge"><i class="fa-solid fa-gas-pump"></i> ${v.fuel}</span>
+        `;
+        card.appendChild(badgeRow);
         const btnRow = document.createElement('div');
         btnRow.style = 'display:flex;gap:0.7rem;margin-top:auto;margin-bottom:1.2rem;';
         const bookBtn = document.createElement('a');
