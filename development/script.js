@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: 'Toyota Pickup', type: 'Pick Up', img: 'Pick up/IMG-20260408-WA0041.jpg' },
       { name: 'Toyota Coaster', type: 'coaster', img: 'Coaster/IMG-20260408-WA0079.jpg' },
       { name: ' Hyundai Bus', type: 'Bus', img: 'Bus/IMG-20260408-WA0045.jpg' },
-      { name: 'small car', type: 'hybrid', img: 'Small Car/IMG-20260408-WA0036.jpg' },
+      { name: 'small car', type: 'hybrid', img: 'SmallCar/IMG-20260408-WA0036.jpg' },
     ];
     const cardsToShow = 3;
     let vehicleIndex = 0;
