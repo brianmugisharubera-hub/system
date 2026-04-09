@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <meta name="description" content="Access Transport Company offers efficient, sustainable logistics and transport solutions in Kigali and beyond.">
+  <meta name="keywords" content="transport, logistics, delivery, green, Kigali, Rwanda, company, sustainable, fleet, business">
+  <meta property="og:title" content="Access Transport Company">
+  <meta property="og:description" content="Efficient, sustainable logistics and transport solutions for businesses and communities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:image" content="/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Car | Access Transport Company</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="header-flex">
+        <div class="header-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
+            <span id="access-measure" class="logo-blue">Access </span>
+            <span class="logo-blue">Transport </span>
+            <span class="logo-company">Company</span>
+          </div>
+          <div>
+            <div class="header-tagline-row">
+              <span class="header-tagline-line header-tagline-line-left"></span><span id="header-tagline" class="header-tagline">With us you are satisfied</span><span class="header-tagline-line header-tagline-line-right"></span>
+            </div>
+          </div>
+      </div>
+      <style>
+      .header-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+        margin-bottom: 1.2rem;
+        margin-left: 2rem;
+      }
+      .header-title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+      .header-title .logo-blue {
+        color: #0a2472;
+      }
+      .header-title .logo-company {
+        color: #5E9330;
+      }
+      .header-tagline {
+        color: #0a2472;
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 0.18rem;
+        margin-bottom: 0.12rem;
+        white-space: nowrap;
+        font-weight: 400;
+        position: relative;
+      }
+      </style>
+      <!-- Hamburger Button -->
+      <button class="copilot-menu-btn" id="openOverlayNav" aria-label="Open navigation menu">
+        <span class="copilot-hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <!-- Sidebar Overlay and Panel -->
+      <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true" style="display:none;"></div>
+      <aside id="sidebarPanel" class="sidebar-panel" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
+        <button class="sidebar-close-btn" id="closeSidebarPanel" aria-label="Close navigation menu">
+          <span class="sidebar-close-x">&times;</span>
+        </button>
+        <nav class="sidebar-nav-links">
+          <a href="index.html" class="sidebar-link home-link"><i class="fa-solid fa-house sidebar-link-icon" style="opacity:0.6;"></i><span>Home</span></a>
+          <a href="about.html" class="sidebar-link about-link"><i class="fa-regular fa-circle-question sidebar-link-icon"></i><span>About</span></a>
+          <a href="services.html" class="sidebar-link services-link"><i class="fa-regular fa-calendar sidebar-link-icon"></i><span>Services</span></a>
+          <a href="contact.html" class="sidebar-link contact-link"><i class="fa-regular fa-envelope sidebar-link-icon"></i><span>Contact</span></a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-footer-top">
+            <a href="#" class="sidebar-footer-link">Terms</a>
+            <a href="#" class="sidebar-footer-link">Privacy</a>
+          </div>
+          <div class="sidebar-footer-bottom">
+            <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AccessTranspor3" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </aside>
+      </div>
+    </nav>
+  </header>
+  <main role="main">
+    <!-- Hero Section -->
+    <section class="booking-hero" style="position: relative; min-height: 260px; display: flex; align-items: center; justify-content: center; background: url('cruiser.png') center/cover no-repeat;">
+      <div style="position: absolute; inset: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.68); z-index: 1;"></div>
+      <div style="position: relative; z-index: 2; border-radius: 1.2rem; padding: 2rem 2rem 1.7rem 2rem; max-width: 600px; width: 100%; text-align: center; margin: 2.5rem 1rem;">
+        <h1 style="color: #fff; font-size: 2.3rem; font-weight: 700; margin-bottom: 0.7rem; letter-spacing: 0.5px;">Book Your Perfect Car</h1>
+        <p style="color: #e0e0e0; font-size: 1.18rem; margin-bottom: 0;">Fast, easy, and reliable car rental in Kigali. Fill out the form below to get started.</p>
+      </div>
+    </section>
+      <style>
+        @keyframes fadeInUp {
+          0% { opacity: 0; transform: translateY(40px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+      </style>
+    <!-- Booking Form Section -->
+    <section style="background: #f4f5f7; min-height: 100vh; padding: 0 0 3rem 0;">
+      <form class="booking-form" id="bookingForm" action="#" method="POST" autocomplete="off" style="max-width: 650px; margin: -4rem auto 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+        <!-- Trip Details Card -->
+        <div class="booking-card" style="background: #fff; border-radius: 1.1rem; box-shadow: 0 4px 18px 0 rgba(0,0,0,0.09); padding: 1.5rem; display: flex; flex-direction: column; gap: 1.1rem;">
+          <h2 style="font-size: 1.18rem; font-weight: 600; margin-bottom: 0.7rem; color: #222; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: #2ecc40; font-size: 1.3em; display: flex; align-items: center;">
+              <i class="fa-solid fa-calendar-days"></i>
+            </span>
+            Trip Details
+          </h2>
+          <div style="display: flex; gap: 1rem;">
+            <div style="flex:1; display:flex; flex-direction:column;">
+              <label for="pickup-date" style="font-weight: 500; margin-bottom: 0.2rem;">Pickup Date <span style='color:#e53935;'>*</span></label>
+              <input type="date" id="pickup-date" name="pickup-date" required style="border-radius: 0.7rem; border: 1px solid #d1d5db; padding: 0.6rem 1rem;">
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column;">
+              <label for="pickup-time" style="font-weight: 500; margin-bottom: 0.2rem;">Pickup Time <span style='color:#e53935;'>*</span></label>
+              <input type="time" id="pickup-time" name="pickup-time" required style="border-radius: 0.7rem; border: 1px solid #d1d5db; padding: 0.6rem 1rem;">
+            </div>
+          </div>
+          <div style="display: flex; gap: 1rem;">
+            <div style="flex:1; display:flex; flex-direction:column;">
+              <label for="return-date" style="font-weight: 500; margin-bottom: 0.2rem;">Return Date <span style='color:#e53935;'>*</span></label>
+              <input type="date" id="return-date" name="return-date" required style="border-radius: 0.7rem; border: 1px solid #d1d5db; padding: 0.6rem 1rem;">
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column;">
+              <label for="return-time" style="font-weight: 500; margin-bottom: 0.2rem;">Return Time <span style='color:#e53935;'>*</span></label>
+              <input type="time" id="return-time" name="return-time" required style="border-radius: 0.7rem; border: 1px solid #d1d5db; padding: 0.6rem 1rem;">
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.7rem;">
+            <div style="display:flex; flex-direction:column; width:100%;">
+              <label for="pickup-location" style="font-weight: 500; margin-bottom: 0.2rem;">Pickup Location <span style='color:#e53935;'>*</span></label>
+              <input type="text" id="pickup-location" name="pickup-location" required placeholder="e.g., Kigali International Airport, Hotel name, Address" style="border-radius: 0.7rem; border: 1px solid #d1d5db; padding: 0.6rem 1rem;">
+            </div>
+            <div style="margin-top:0.2rem; display: flex; align-items: center; gap: 0.5rem;">
+              <input type="checkbox" id="same-location" name="same-location" style="appearance: none; width: 1.15em; height: 1.15em; border-radius: 0.3em; border: 1.5px solid #2196f3; background: #fff; display: inline-block; position: relative; margin-right: 0.5rem; vertical-align: middle;">
+              <span style="position: absolute; pointer-events: none; width: 1.15em; height: 1.15em; display: flex; align-items: center; justify-content: center;">
+                <span id="blue-checkmark" style="display:none; margin-right:0.3em;"><i class="fa-solid fa-check" style="color:#fff; background:#2196f3; border-radius:0.2em; padding:0.08em 0.18em 0.08em 0.18em; font-size:0.9em;"></i></span>
+              </span>
+              <label for="same-location" style="display:inline; font-weight: 500; color: #2196f3; cursor:pointer; position:relative;">
+                <span style="display: inline-flex; align-items: center;">
+                  Drop off at same location
+                </span>
+              </label>
+            </div>
+          </div>
+          <script>
+            // Custom blue checkbox checkmark
+            document.addEventListener('DOMContentLoaded', function() {
+              var cb = document.getElementById('same-location');
+              var mark = document.getElementById('blue-checkmark');
+              if (cb && mark) {
+                cb.addEventListener('change', function() {
+                  mark.style.display = cb.checked ? 'inline-flex' : 'none';
+                });
+              }
+            });
+          </script>
+        </div>
+        <!-- Preferences Card -->
+        <div class="booking-card" style="background: #fff; border-radius: 1.1rem; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+          <h2 style="font-size: 1.18rem; font-weight: 600; margin-bottom: 0.7rem; color: #222;">Your Preferences</h2>
+          <div style="display: flex; gap: 1rem;">
+            <div style="flex:1; display:flex; flex-direction:column;">
+              <label for="car-type">Preferred Car Type</label>
+              <select id="car-type" name="car-type" required>
+                <option value="Any type">Any type</option>
+                <option value="Land Cruiser">Land Cruiser</option>
+                <option value="SUV">SUV</option>
+                <option value="Luxury Car">Luxury Car</option>
+                <option value="Van">Van</option>
+                <option value="Pick Up">Pick Up</option>
+                <option value="Coaster">Coaster</option>
+                <option value="Bus">Bus</option>
+                <option value="Small Car">Small Car</option>
+                <option value="Wedding Car">Wedding Car</option>
+              </select>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column;">
+              <label for="transmission">Transmission</label>
+              <select id="transmission" name="transmission" required>
+                <option value="Any">Any</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+              </select>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0;">
+            <div style="display:flex; flex-direction:column;">
+              <label for="passengers">Number of Passengers</label>
+              <select id="passengers" name="passengers" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9+">9+</option>
+              </select>
+            </div>
+            <div style="display:flex; flex-direction:column;">
+              <label for="purpose">Purpose of Rental</label>
+              <select id="purpose" name="purpose" required>
+                <option value="Business">Business</option>
+                <option value="Leisure">Leisure</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Airport Transfer">Airport Transfer</option>
+                <option value="Tourism">Tourism</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div style="display:flex; flex-direction:column;">
+              <label for="requirements">Additional Requirements</label>
+              <textarea id="requirements" name="requirements" rows="3" placeholder="Anything else we should know?"></textarea>
+            </div>
+          </div>
+        </div>
+        <!-- Contact Information Card -->
+        <div class="booking-card" style="background: #fff; border-radius: 1.1rem; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+          <h2 style="font-size: 1.18rem; font-weight: 600; margin-bottom: 0.7rem; color: #222;">Contact Information</h2>
+          <div style="display: flex; flex-direction: column; gap: 0;">
+            <div style="display:flex; flex-direction:column; width:100%;">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" required placeholder="Your full name">
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <div style="flex:1; display:flex; flex-direction:column;">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Your email address">
+              </div>
+              <div style="flex:1; display:flex; flex-direction:column;">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Phone number">
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:column; width:100%;">
+              <label for="whatsapp">WhatsApp (optional)</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp number (optional)">
+            </div>
+          </div>
+        </div>
+        <!-- Buttons -->
+        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+          <button type="submit" style="flex:1; background: #2ecc40; color: #fff; border: none; border-radius: 0.7rem; font-size: 1.15rem; font-weight: 600; padding: 1rem 0; box-shadow: 0 2px 8px 0 rgba(46,204,64,0.08); cursor: pointer; transition: background 0.2s;">Submit Booking Request</button>
+          <a href="services.html" style="flex:1; display: flex; align-items: center; justify-content: center; background: #fff; color: #2ecc40; border: 2px solid #2ecc40; border-radius: 0.7rem; font-size: 1.15rem; font-weight: 600; padding: 1rem 0; text-decoration: none; box-shadow: 0 2px 8px 0 rgba(46,204,64,0.04); transition: background 0.2s;">Browse Fleet Instead</a>
+        </div>
+        <!-- What happens next info box -->
+        <div style="background: #f8fafb; border-radius: 0.8rem; box-shadow: 0 1px 6px 0 rgba(0,0,0,0.04); padding: 1.2rem 1.5rem; margin-top: 1.2rem; color: #444; font-size: 1.04rem;">
+          <strong>What happens next?</strong><br>
+          Our team will review your request and contact you promptly to confirm availability, pricing, and finalize your booking. No payment is required until confirmation.
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-col footer-blurb" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
+        <span class="footer-anim-left"><h3>Access Transport Company</h3></span>
+        <span class="footer-anim-left"><p>Efficient, sustainable logistics and transport solutions for businesses and communities across the region.</p></span>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
+        <span class="footer-anim-up"><h4>Services</h4></span>
+        <ul>
+          <li><span class="footer-anim-up"><a href="services.html">Car Rental</a></span></li>
+          <li><span class="footer-anim-up"><a href="services.html">Wedding Cars</a></span></li>
+          <li><span class="footer-anim-up"><a href="services.html">Airport Transfer</a></span></li>
+          <li><span class="footer-anim-up"><a href="services.html">Long Distance Travel</a></span></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="240">
+        <span class="footer-anim-down"><h4>Company</h4></span>
+        <ul>
+          <li><span class="footer-anim-down"><a href="about.html">About Us</a></span></li>
+          <li><span class="footer-anim-down"><a href="about.html">Our Values</a></span></li>
+          <li><span class="footer-anim-down"><a href="about.html">Careers</a></span></li>
+          <li><span class="footer-anim-down"><a href="customers.html">Customer Overview</a></span></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="360">
+        <span class="footer-anim-right"><h4>Contact</h4></span>
+        <ul>
+          <li><span class="footer-anim-right"><a href="contact.html">Contact Us</a></span></li>
+          <li><span class="footer-anim-right"><a href="mailto:brianmugisharubera@gmail.com">Email Us</a></span></li>
+        </ul>
+        <ul style="margin-top:1.2rem;">
+          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Privacy Policy</a></span></li>
+          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Terms &amp; Conditions</a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-social" style="display:flex;justify-content:flex-end;gap:1.1rem;margin-bottom:0.2rem;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="480">
+      <span class="footer-social-label">Social Media</span>
+      <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/AccessTranspor3" aria-label="Twitter" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-bottom" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">
+      &copy; Access Transport Company.
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: false });
+  </script>
+  <script>
+    const footer = document.querySelector('.main-footer');
+    const footerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          footer.classList.add('footer-visible');
+        } else {
+          footer.classList.remove('footer-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    footerObserver.observe(footer);
+  </script>
+</body>
+</html>
