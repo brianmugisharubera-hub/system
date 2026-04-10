@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: 'Toyota Coaster', type: 'coaster', img: 'Coaster/IMG-20260408-WA0079.jpg', transmission: 'Manual', passengers: 30, fuel: 'Diesel' },
       { name: 'Hyundai Bus', type: 'Bus', img: 'Bus/IMG-20260408-WA0045.jpg', transmission: 'Manual', passengers: 45, fuel: 'Diesel' },
       { name: 'Small Car', type: 'Hybrid', img: 'SmallCar/IMG-20260408-WA0036.jpg', transmission: 'Automatic', passengers: 4, fuel: 'Hybrid' },
+      { name: 'KIA Solento', type: 'SUV', img: 'SUV/IMG-20260408-WA0084.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Diesel/petrol' },
+      { name: 'Toyota RAV4', type: 'SUV', img: 'SUV/IMG-20260408-WA0068.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Petrol' },
     ];
     const cardsToShow = 3;
     let vehicleIndex = 0;
