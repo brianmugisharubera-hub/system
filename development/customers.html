@@ -49,28 +49,84 @@
   <header class="main-header">
     <nav class="navbar" aria-label="Main Navigation">
       <div class="header-flex">
-        <div class="header-title">
-          <span id="access-measure" class="logo-blue">Access </span>
-          <span class="logo-blue">Transport </span>
-          <span class="logo-company">Company</span>
-        </div>
-        <div>
-          <div class="header-tagline-row">
-            <span class="header-tagline-line header-tagline-line-left"></span><span id="header-tagline" class="header-tagline">With us you are satisfied</span><span class="header-tagline-line header-tagline-line-right"></span>
+        <div class="header-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
+            <span id="access-measure" class="logo-blue">Access </span>
+            <span class="logo-blue">Transport </span>
+            <span class="logo-company">Company</span>
+          </div>
+          <div>
+            <div class="header-tagline-row">
+              <span class="header-tagline-line header-tagline-line-left"></span><span id="header-tagline" class="header-tagline">With us you are satisfied</span><span class="header-tagline-line header-tagline-line-right"></span>
+            </div>
+          </div>
+      </div>
+      <style>
+      .header-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+        margin-bottom: 1.2rem;
+        margin-left: 2rem;
+      }
+      .header-title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+      .header-title .logo-blue {
+        color: #0a2472;
+      }
+      .header-title .logo-company {
+        color: #5E9330;
+      }
+      .header-tagline {
+        color: #0a2472;
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 0.18rem;
+        margin-bottom: 0.12rem;
+        white-space: nowrap;
+        font-weight: 400;
+        position: relative;
+      }
+      </style>
+      <!-- Hamburger Button -->
+      <button class="copilot-menu-btn" id="openOverlayNav" aria-label="Open navigation menu">
+        <span class="copilot-hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <!-- Sidebar Overlay and Panel -->
+      <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true" style="display:none;"></div>
+      <aside id="sidebarPanel" class="sidebar-panel" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
+        <button class="sidebar-close-btn" id="closeSidebarPanel" aria-label="Close navigation menu">
+          <span class="sidebar-close-x">&times;</span>
+        </button>
+        <nav class="sidebar-nav-links">
+          <a href="index.html" class="sidebar-link home-link"><i class="fa-solid fa-house sidebar-link-icon" style="opacity:0.6;"></i><span>Home</span></a>
+          <a href="about.html" class="sidebar-link about-link"><i class="fa-regular fa-circle-question sidebar-link-icon"></i><span>About</span></a>
+          <a href="services.html" class="sidebar-link services-link"><i class="fa-regular fa-calendar sidebar-link-icon"></i><span>Services</span></a>
+          <a href="contact.html" class="sidebar-link contact-link"><i class="fa-regular fa-envelope sidebar-link-icon"></i><span>Contact</span></a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-footer-top">
+            <a href="#" class="sidebar-footer-link">Terms</a>
+            <a href="#" class="sidebar-footer-link">Privacy</a>
+          </div>
+          <div class="sidebar-footer-bottom">
+            <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AccessTranspor3" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+      </aside>
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
     </nav>
-  </header>
 
   <main style="min-height:60vh;">
     <div class="customer-overview-layout" style="display:flex;gap:2.5rem;align-items:flex-start;justify-content:center;max-width:1200px;margin:3rem auto 3rem auto;flex-wrap:wrap;">
@@ -84,33 +140,29 @@
           <div style="width:54px;height:54px;border-radius:50%;background:#eaf5db;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
             <span style="font-size:2rem;color:#5E9330;">👤</span>
           </div>
-          <p style="font-style:italic;color:#333;text-align:center;">"Access Transport Company delivered our goods on time and with a smile. Highly recommended!"</p>
-          <div style="margin-top:1rem;font-weight:700;color:#0a2472;">Jane D.</div>
-          <div style="font-size:0.98rem;color:#5E9330;">Business Owner</div>
+          <p style="font-style:italic;color:#333;text-align:center;">"Honestly the best transport company I have worked with in Kigali. Every single booking has been smooth and stress free. The vehicles are always clean and comfortable, the drivers are polite and professional, and they are always on time without fail. I have recommended them to my entire team and everyone has had the same great experience."</p>
+          <div style="margin-top:1rem;font-weight:700;color:#0a2472;">Jean Paul N.</div>
         </div>
         <div class="testimonial-card" style="background:#fff;border-radius:0.7rem;padding:2rem 1.5rem;box-shadow:0 1px 8px 0 rgba(90,127,29,0.08);display:flex;flex-direction:column;align-items:center;" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <div style="width:54px;height:54px;border-radius:50%;background:#eaf5db;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
             <span style="font-size:2rem;color:#5E9330;">👤</span>
           </div>
-          <p style="font-style:italic;color:#333;text-align:center;">"Professional, eco-friendly, and reliable. We trust them for all our logistics needs."</p>
-          <div style="margin-top:1rem;font-weight:700;color:#0a2472;">GreenBiz Ltd.</div>
-          <div style="font-size:0.98rem;color:#5E9330;">Corporate Client</div>
+          <p style="font-style:italic;color:#333;text-align:center;">"I used Access Transport for a wedding I was organizing and they completely exceeded my expectations. From the first phone call to the last drop off, everything was handled with care and professionalism. The vehicles looked amazing and the drivers were well dressed and punctual. My clients were genuinely impressed and I will definitely be booking them again for future events."</p>
+          <div style="margin-top:1rem;font-weight:700;color:#0a2472;">Marie Claire U.</div>
         </div>
         <div class="testimonial-card" style="background:#fff;border-radius:0.7rem;padding:2rem 1.5rem;box-shadow:0 1px 8px 0 rgba(90,127,29,0.08);display:flex;flex-direction:column;align-items:center;" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
           <div style="width:54px;height:54px;border-radius:50%;background:#eaf5db;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
             <span style="font-size:2rem;color:#5E9330;">👤</span>
           </div>
-          <p style="font-style:italic;color:#333;text-align:center;">"Great customer service and always on time. Will use again!"</p>
-          <div style="margin-top:1rem;font-weight:700;color:#0a2472;">Samuel K.</div>
-          <div style="font-size:0.98rem;color:#5E9330;">Retail Manager</div>
+          <p style="font-style:italic;color:#333;text-align:center;">"I travel frequently for work and Access Transport has become my most reliable partner in Kigali. Whether it is an early morning airport run or a late evening pickup after a long meeting, they have never once let me down. The communication is clear, the booking process is simple, and I always feel like a valued customer. Highly recommended to any business traveler."</p>
+          <div style="margin-top:1rem;font-weight:700;color:#0a2472;">David K.</div>
         </div>
         <div class="testimonial-card" style="background:#fff;border-radius:0.7rem;padding:2rem 1.5rem;box-shadow:0 1px 8px 0 rgba(90,127,29,0.08);display:flex;flex-direction:column;align-items:center;" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
           <div style="width:54px;height:54px;border-radius:50%;background:#eaf5db;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
             <span style="font-size:2rem;color:#5E9330;">👤</span>
           </div>
-          <p style="font-style:italic;color:#333;text-align:center;">"Reliable, friendly, and affordable. Our go-to for deliveries."</p>
-          <div style="margin-top:1rem;font-weight:700;color:#0a2472;">Aline M.</div>
-          <div style="font-size:0.98rem;color:#5E9330;">Entrepreneur</div>
+          <p style="font-style:italic;color:#333;text-align:center;">"We have been including Access Transport in our tour packages for over a year now and our clients consistently give them top marks. The rides are smooth, the vehicles are well maintained, and the drivers go out of their way to make guests feel welcome. It has genuinely improved the quality of our tours and we would not use anyone else."</p>
+          <div style="margin-top:1rem;font-weight:700;color:#0a2472;">Sarah M.</div>
         </div>
       </div>
     </div>
