@@ -311,3 +311,108 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.style.animationDelay = (0.2 + i * 0.15) + 's';
   });
 });
+
+// GSAP + ScrollTrigger animations and interactive tilt/float for vehicle cards
+(function() {
+  if (!window.gsap || !window.ScrollTrigger) return; // graceful fallback
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Heading flip: find the H2 that contains the exact text
+  const vehiclesHeading = Array.from(document.querySelectorAll('h2')).find(h => h.textContent && h.textContent.trim().includes('Explore Our Vehicles'));
+  if (vehiclesHeading) {
+    gsap.from(vehiclesHeading, {
+      rotationX: -90,
+      opacity: 0,
+      transformPerspective: 800,
+      transformOrigin: 'top center',
+      duration: 0.8,
+      ease: 'back.out(1.7)',
+      scrollTrigger: {
+        trigger: vehiclesHeading,
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      }
+    });
+  }
+
+  let floatTween = null;
+
+  function applyCardAnimations() {
+    const cards = document.querySelectorAll('.vehicle-card');
+    if (!cards || cards.length === 0) return;
+
+    // Kill previous tweens on cards to avoid stacking
+    gsap.killTweensOf(cards);
+
+    // Staggered 3D slide-in for cards
+    gsap.fromTo(cards, {
+      y: 80,
+      opacity: 0,
+      scale: 0.9,
+      rotationY: 15,
+      transformPerspective: 800
+    }, {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      rotationY: 0,
+      duration: 0.8,
+      ease: 'power3.out',
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: '.vehicle-carousel-track',
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      }
+    });
+
+    // Attach hover tilt handlers once per card
+    cards.forEach(card => {
+      if (card.dataset.tiltAttached) return;
+      card.dataset.tiltAttached = '1';
+      card.style.transformStyle = 'preserve-3d';
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width;
+        const py = (e.clientY - rect.top) / rect.height;
+        const maxTilt = 10; // degrees
+        const tiltY = (px - 0.5) * 2 * maxTilt; // left/right
+        const tiltX = (0.5 - py) * 2 * maxTilt; // top/bottom
+        // fast update for smoothness
+        card.style.transition = 'transform 0.1s ease';
+        card.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.4s ease';
+        card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg)';
+      });
+    });
+
+    // Continuous float animation on the center/active card
+    if (floatTween) {
+      try { floatTween.kill(); } catch (e) {}
+      floatTween = null;
+    }
+    const centerIndex = Math.floor(cards.length / 2);
+    const centerCard = cards[centerIndex];
+    if (centerCard) {
+      floatTween = gsap.to(centerCard, { y: -8, yoyo: true, repeat: -1, duration: 2, ease: 'sine.inOut' });
+    }
+  }
+
+  // Observe carousel track for changes and re-apply animations when cards are re-rendered
+  const trackEl = document.querySelector('.vehicle-carousel-track');
+  if (trackEl) {
+    const mo = new MutationObserver(() => {
+      applyCardAnimations();
+      // ensure ScrollTrigger recalculates
+      try { ScrollTrigger.refresh(); } catch (e) {}
+    });
+    mo.observe(trackEl, { childList: true });
+  }
+
+  // Run once initially
+  applyCardAnimations();
+})();
