@@ -2,251 +2,333 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Access Transport Company</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <title>Our Services | Access Transport Company</title>
+  <meta name="description" content="Explore our premium transport services in Rwanda, including car rental, city and country tours, airport transfers, wedding cars, and long-distance travel.">
+  <link rel="stylesheet" href="./style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
-  <header class="main-header">
-    <nav class="navbar" aria-label="Main Navigation">
-      <div class="header-flex">
-        <div class="header-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
-            <span id="access-measure" class="logo-blue">Access </span>
-            <span class="logo-blue">Transport </span>
-            <span class="logo-company">Company</span>
-          </div>
-          <div>
-            <div class="header-tagline-row">
-              <span class="header-tagline-line header-tagline-line-left"></span><span id="header-tagline" class="header-tagline">With us you are satisfied</span><span class="header-tagline-line header-tagline-line-right"></span>
-            </div>
-          </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Fixed Glass Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="./index.html" class="nav-brand">
+      <div class="brand-title">
+        <span class="navy">Access Transport</span> <span class="green">Company</span>
       </div>
-      <style>
-      .header-flex {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
-        margin-bottom: 1.2rem;
-        margin-left: 2rem;
-      }
-      .header-title {
-        font-size: 1.7rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        white-space: nowrap;
-      }
-      .header-title .logo-blue {
-        color: #0a2472;
-      }
-      .header-title .logo-company {
-        color: #5E9330;
-      }
-      .header-tagline {
-        color: #0a2472;
-        font-size: 13px;
-        font-style: italic;
-        margin-top: 0.18rem;
-        margin-bottom: 0.12rem;
-        white-space: nowrap;
-        font-weight: 400;
-        position: relative;
-      }
-      </style>
-      <!-- Hamburger Button -->
-      <button class="copilot-menu-btn" id="openOverlayNav" aria-label="Open navigation menu">
-        <span class="copilot-hamburger" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
-      <!-- Sidebar Overlay and Panel -->
-      <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true" style="display:none;"></div>
-      <aside id="sidebarPanel" class="sidebar-panel" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
-        <button class="sidebar-close-btn" id="closeSidebarPanel" aria-label="Close navigation menu">
-          <span class="sidebar-close-x">&times;</span>
-        </button>
-        <nav class="sidebar-nav-links">
-          <a href="index.html" class="sidebar-link home-link"><i class="fa-solid fa-house sidebar-link-icon" style="opacity:0.6;"></i><span>Home</span></a>
-          <a href="about.html" class="sidebar-link about-link"><i class="fa-regular fa-circle-question sidebar-link-icon"></i><span>About</span></a>
-          <a href="#services" class="sidebar-link services-link"><i class="fa-regular fa-calendar sidebar-link-icon"></i><span>Services</span></a>
-          <a href="contact.html" class="sidebar-link contact-link"><i class="fa-regular fa-envelope sidebar-link-icon"></i><span>Contact</span></a>
-        </nav>
-        <div class="sidebar-footer">
-          <div class="sidebar-footer-top">
-            <a href="#" class="sidebar-footer-link">Terms</a>
-            <a href="#" class="sidebar-footer-link">Privacy</a>
-          </div>
-          <div class="sidebar-footer-bottom">
-            <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/AccessTranspor3" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          </div>
+      <div class="brand-tagline-container">
+        <div class="brand-line"></div>
+        <span class="brand-tagline">With us you are satisfied</span>
+        <div class="brand-line"></div>
+      </div>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-label="Toggle Menu">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+  </nav>
+
+  <!-- Right Sliding Navigation Panel -->
+  <div class="nav-panel-overlay" id="panel-overlay"></div>
+  <div class="nav-panel" id="nav-panel">
+    <ul class="panel-menu">
+      <li class="panel-item"><a href="./index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li class="panel-item"><a href="./about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li class="panel-item"><a href="./services.html"><i class="fa-solid fa-car-side"></i> Services</a></li>
+      <li class="panel-item"><a href="./contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="panel-footer">
+      <div class="panel-footer-title">Connect With Us</div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/accesstransportltdrwanda/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://x.com/AccessTranspor3" target="_blank" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/accesstransportcompany/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/250788309931" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Secondary Hero Section -->
+  <div class="secondary-hero" style="background-image: url('./animation/ezgif-frame-001.png');">
+    <div class="secondary-hero-overlay"></div>
+    <div class="secondary-hero-content" data-aos="fade-up">
+      <h1 class="secondary-hero-title">Our Services</h1>
+      <p class="secondary-hero-subtitle">Premium passenger logistics and tailored transport solutions for every need</p>
+    </div>
+  </div>
+
+  <!-- Full Services List Section -->
+  <section class="services-full-list reveal-element" id="services-list">
+    <div class="services-full-grid">
+      
+      <!-- Service 1: Car Rental -->
+      <div class="service-long-card" data-aos="fade-up">
+        <div class="service-long-icon"><i class="fa-solid fa-car"></i></div>
+        <div class="service-long-info">
+          <h3>Car Rental</h3>
+          <p>
+            Access Transport Company offers highly flexible short-term and long-term car rental options tailored for individuals, corporate bodies, and non-governmental institutions. Select from our versatile fleet containing premium SUVs, 4x4s, sedans, and large capacity buses to align with your specific itinerary in Kigali or country-wide.
+          </p>
         </div>
-      </aside>
+        <div class="service-long-features">
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Flexible self-drive or professional driver options</li>
+            <li><i class="fa-solid fa-circle-check"></i> Customized long-term lease discounts</li>
+            <li><i class="fa-solid fa-circle-check"></i> Comprehensive vehicle maintenance included</li>
+            <li><i class="fa-solid fa-circle-check"></i> Clean contract details, zero hidden charges</li>
+          </ul>
+          <a href="./booking.html" class="btn btn-green">Book Now</a>
+        </div>
       </div>
-    </nav>
-  </header>
-  <main>
 
-    <!-- Vehicle Listing Grid Section -->
-    <section id="vehicle-listing" style="margin:3.5rem 0 3.5rem 0;">
-      <div style="text-align:center;margin-bottom:0.7rem;">
-        <span style="color:#5E9330;font-size:0.85rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;">WHAT WE OFFER</span>
+      <!-- Service 2: City and Country Tours -->
+      <div class="service-long-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-long-icon"><i class="fa-solid fa-compass"></i></div>
+        <div class="service-long-info">
+          <h3>City and Country Tours</h3>
+          <p>
+            Experience Rwanda, the land of a thousand hills, with maximum safety and style. Our guided city and country tours are supported by highly reliable, heavy-duty 4x4 Land Cruisers and safari vans, ideal for traversing rugged park terrains. Enjoy tailored routing with expert local drivers who understand every scenic corner of the region.
+          </p>
+        </div>
+        <div class="service-long-features">
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Customized city tours and national park safaris</li>
+            <li><i class="fa-solid fa-circle-check"></i> Expert drivers fluent in local routes and languages</li>
+            <li><i class="fa-solid fa-circle-check"></i> All-inclusive transport, fuel, and toll planning</li>
+            <li><i class="fa-solid fa-circle-check"></i> Robust, rough-terrain ready SUVs and vans</li>
+          </ul>
+          <a href="./booking.html" class="btn btn-green">Book Now</a>
+        </div>
       </div>
-      <h2 style="text-align:center;font-size:2.5rem;font-weight:700;color:#222;margin-bottom:2.2rem;">Explore Our Vehicles</h2>
-      <div class="vehicle-listing-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;max-width:1100px;margin:0 auto;">
-      </div>
-    </section>
-    <style>
-      .vehicle-listing-grid .vehicle-card {
-        background:#fff;
-        border:1px solid #e5e7eb;
-        border-radius:0.7rem;
-        overflow:hidden;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        box-shadow:0 1px 4px rgba(0,0,0,0.06);
-        transition:box-shadow 0.25s cubic-bezier(.4,2,.3,1),transform 0.22s cubic-bezier(.4,2,.3,1);
-        min-width:260px;
-        max-width:320px;
-        width:100%;
-        height:370px;
-        position:relative;
-      }
-      .vehicle-listing-grid .vehicle-card:hover {
-        transform:translateY(-18px) scale(1.03);
-        box-shadow:0 10px 32px rgba(30,41,59,0.18),0 1.5px 4px rgba(0,0,0,0.10);
-        z-index:2;
-      }
-    </style>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const vehicles = [
-          { name: 'Toyota Land Cruiser', type: 'Land Cruiser', img: 'Land cruiser/IMG-20260408-WA0052.jpg', transmission: 'Automatic', passengers: 7, fuel: 'Diesel' },
-          { name: 'Toyota RAV4', type: 'SUV', img: 'SUV/IMG-20260408-WA0003.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Petrol' },
-          { name: 'BMW', type: 'Luxury Car', img: 'Luxury Car/IMG-20260408-WA0054.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Petrol' },
-          { name: 'Toyota Hiace', type: 'Van', img: 'VAN/IMG-20260408-WA0018.jpg', transmission: 'Manual', passengers: 14, fuel: 'Diesel' },
-          { name: 'Toyota Pickup', type: 'Pick Up', img: 'Pick up/IMG-20260408-WA0041.jpg', transmission: 'Manual', passengers: 5, fuel: 'Diesel' },
-          { name: 'Toyota Coaster', type: 'coaster', img: 'Coaster/IMG-20260408-WA0079.jpg', transmission: 'Manual', passengers: 30, fuel: 'Diesel' },
-          { name: 'Hyundai Bus', type: 'Bus', img: 'Bus/IMG-20260408-WA0045.jpg', transmission: 'Manual', passengers: 45, fuel: 'Diesel' },
-          { name: 'Small Car', type: 'Hybrid', img: 'SmallCar/IMG-20260408-WA0036.jpg', transmission: 'Automatic', passengers: 4, fuel: 'Hybrid' },
-          { name: 'KIA Solento', type: 'SUV', img: 'SUV/IMG-20260408-WA0084.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Diesel/petrol' },
-          { name: 'Toyota RAV4', type: 'SUV', img: 'SUV/IMG-20260408-WA0068.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Petrol' },
-          { name: 'Toyota Prius', type: 'Hybrid sedan', img: 'SmallCar/IMG-20260408-WA0015.jpg', transmission: 'Automatic', passengers: 5, fuel: 'Petrol+Electric' },
-          { name: 'Toyota Land Cruiser', type: 'Land Cruiser', img: 'Land cruiser/IMG-20260408-WA0087.jpg', transmission: 'Automatic', passengers: 7, fuel: 'Diesel' },
-        ];
-        const grid = document.querySelector('.vehicle-listing-grid');
-        if (grid) {
-          vehicles.forEach(v => {
-            const card = document.createElement('div');
-            card.className = 'vehicle-card';
-            card.style = 'background:#fff;border:1px solid #e5e7eb;border-radius:0.7rem;overflow:hidden;display:flex;flex-direction:column;align-items:center;box-shadow:0 1px 4px rgba(0,0,0,0.06);transition:box-shadow 0.25s cubic-bezier(.4,2,.3,1),transform 0.22s cubic-bezier(.4,2,.3,1);min-width:260px;max-width:320px;width:100%;height:370px;position:relative;';
-            const img = document.createElement('img');
-            img.src = v.img;
-            img.alt = v.name;
-            img.style = 'width:100%;height:60%;object-fit:cover;background:#f3f3f3;';
-            card.appendChild(img);
-            const name = document.createElement('div');
-            name.textContent = v.name;
-            name.style = 'font-weight:700;color:#222;font-size:1.13rem;margin-top:1.1rem;';
-            card.appendChild(name);
-            const type = document.createElement('div');
-            type.textContent = v.type;
-            type.style = 'font-size:0.97rem;color:#888;margin-bottom:0.7rem;';
-            card.appendChild(type);
-            // Icon badges row
-            const badgeRow = document.createElement('div');
-            badgeRow.className = 'vehicle-badge-row';
-            badgeRow.style = 'display:flex;gap:0.5rem;margin-bottom:1.1rem;';
-            badgeRow.innerHTML = `
-              <span class="vehicle-badge"><i class="fa-solid fa-gears"></i> ${v.transmission}</span>
-              <span class="vehicle-badge"><i class="fa-solid fa-user-group"></i> ${v.passengers}</span>
-              <span class="vehicle-badge"><i class="fa-solid fa-gas-pump"></i> ${v.fuel}</span>
-            `;
-            card.appendChild(badgeRow);
-            const btnRow = document.createElement('div');
-            btnRow.style = 'display:flex;gap:0.7rem;margin-top:auto;margin-bottom:1.2rem;';
-            const bookBtn = document.createElement('a');
-            bookBtn.href = 'contact.html';
-            bookBtn.textContent = 'Book Now';
-            bookBtn.style = 'background:#5E9330;color:#fff;font-weight:600;padding:0.5rem 1.2rem;border:none;border-radius:0.4rem;font-size:1rem;box-shadow:0 1px 3px rgba(94,147,48,0.08);text-decoration:none;transition:background 0.18s;';
-            bookBtn.onmouseenter = () => bookBtn.style.background = '#497324';
-            bookBtn.onmouseleave = () => bookBtn.style.background = '#5E9330';
-            const detailsBtn = document.createElement('a');
-            detailsBtn.href = 'contact.html';
-            detailsBtn.textContent = 'Details';
-            detailsBtn.style = 'background:#fff;color:#222;font-weight:600;padding:0.5rem 1.2rem;border:1.5px solid #222;border-radius:0.4rem;font-size:1rem;text-decoration:none;transition:background 0.18s;';
-            detailsBtn.onmouseenter = () => { detailsBtn.style.background = '#222'; detailsBtn.style.color = '#fff'; };
-            detailsBtn.onmouseleave = () => { detailsBtn.style.background = '#fff'; detailsBtn.style.color = '#222'; };
-            btnRow.appendChild(bookBtn);
-            btnRow.appendChild(detailsBtn);
-            card.appendChild(btnRow);
-            grid.appendChild(card);
-          });
-        }
-      });
-    </script>
 
-  </main>
-  <footer class="main-footer" role="contentinfo">
-    <div class="footer-content">
-      <div class="footer-col footer-blurb" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
-        <span class="footer-anim-left"><h3>Access Transport Company</h3></span>
-        <span class="footer-anim-left"><p>Efficient, sustainable logistics and transport solutions for businesses and communities across the region.</p></span>
+      <!-- Service 3: Airport Transfers -->
+      <div class="service-long-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="service-long-icon"><i class="fa-solid fa-plane-arrival"></i></div>
+        <div class="service-long-info">
+          <h3>Airport Transfers</h3>
+          <p>
+            Enjoy a stress-free transition from flight to city. We coordinate reliable, 24/7 airport passenger pickups and drops at Kigali International Airport. Our drivers monitor flight logs in real-time, greeting you directly inside the terminal to assist with luggage and ensure a smooth, comfortable transfer to your destination.
+          </p>
+        </div>
+        <div class="service-long-features">
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Operational 24/7 with real-time flight tracking</li>
+            <li><i class="fa-solid fa-circle-check"></i> Personalized "Meet & Greet" terminal greetings</li>
+            <li><i class="fa-solid fa-circle-check"></i> Fixed pricing with zero airport waiting surcharges</li>
+            <li><i class="fa-solid fa-circle-check"></i> Luggage handling support and luxury sedans</li>
+          </ul>
+          <a href="./booking.html" class="btn btn-green">Book Now</a>
+        </div>
       </div>
-      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
-        <span class="footer-anim-up"><h4>Services</h4></span>
-        <ul>
-          <li><span class="footer-anim-up"><a href="#services">car Rental</a></span></li>
-          <li><span class="footer-anim-up"><a href="#services">wedding cars</a></span></li>
-          <li><span class="footer-anim-up"><a href="#services">airport transfer</a></span></li>
-          <li><span class="footer-anim-up"><a href="#services">long distance travel</a></span></li>
+
+      <!-- Service 4: Wedding Cars -->
+      <div class="service-long-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-long-icon"><i class="fa-solid fa-ring"></i></div>
+        <div class="service-long-info">
+          <h3>Wedding Cars</h3>
+          <p>
+            Celebrate your landmark day with absolute sophistication. We offer a curated line of executive bridal sedans, luxury SUVs, and decorated escort vehicles. Our service includes highly professional, elegantly dressed chauffeurs who guarantee flawless punctuality and style to make your celebration memorable.
+          </p>
+        </div>
+        <div class="service-long-features">
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Immaculate, decorated luxury sedans & SUVs</li>
+            <li><i class="fa-solid fa-circle-check"></i> Uniformed, elite, and highly trained chauffeurs</li>
+            <li><i class="fa-solid fa-circle-check"></i> Stringent punctuality scheduling systems</li>
+            <li><i class="fa-solid fa-circle-check"></i> Escort group vans and VIP motorcade setups</li>
+          </ul>
+          <a href="./booking.html" class="btn btn-green">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Service 5: Long Distance Travel -->
+      <div class="service-long-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="service-long-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="service-long-info">
+          <h3>Long Distance Travel</h3>
+          <p>
+            For long-haul, intercity, or regional cross-border travel, we provide heavy-duty, highly comfortable transport solutions. Our vehicles are outfitted with premium air-conditioning, soft passenger seating, and emergency security features. Rely on drivers who are thoroughly experienced in navigating regional highway systems safely.
+          </p>
+        </div>
+        <div class="service-long-features">
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Regional, cross-border, and intercity capabilities</li>
+            <li><i class="fa-solid fa-circle-check"></i> Premium vehicle cabins with enhanced comfort features</li>
+            <li><i class="fa-solid fa-circle-check"></i> Routine multi-point safety testing before travel</li>
+            <li><i class="fa-solid fa-circle-check"></i> Drivers experienced in cross-border routes</li>
+          </ul>
+          <a href="./booking.html" class="btn btn-green">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Col 1 -->
+      <div>
+        <div class="footer-brand">Access Transport</div>
+        <p class="footer-about-text">
+          Access Transport Company delivers efficient, safe, and sustainable logistics and passenger transport solutions. We empower businesses, institutions, and communities across Rwanda and the East African region.
+        </p>
+      </div>
+
+      <!-- Col 2 -->
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="./services.html">Car Rental</a></li>
+          <li><a href="./services.html">Wedding Cars</a></li>
+          <li><a href="./services.html">Airport Transfer</a></li>
+          <li><a href="./services.html">Long Distance Travel</a></li>
         </ul>
       </div>
-      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="240">
-        <span class="footer-anim-down"><h4>Company</h4></span>
-        <ul>
-          <li><span class="footer-anim-down"><a href="about.html">About Us</a></span></li>
-          <li><span class="footer-anim-down"><a href="about.html">Our Values</a></span></li>
-          <li><span class="footer-anim-down"><a href="about.html">Careers</a></span></li>
-          <li><span class="footer-anim-down"><a href="customers.html">Customer Overview</a></span></li>
+
+      <!-- Col 3 -->
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./about.html#values">Our Values</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="./customers.html">Customer Overview</a></li>
         </ul>
       </div>
-      <div class="footer-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="360">
-        <span class="footer-anim-right"><h4>Contact</h4></span>
-        <ul>
-          <li><span class="footer-anim-right"><a href="contact.html">Contact Us</a></span></li>
-          <li><span class="footer-anim-right"><a href="mailto:brianmugisharubera@gmail.com">Email Us</a></span></li>
-        </ul>
-        <ul style="margin-top:1.2rem;">
-          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Privacy Policy</a></span></li>
-          <li><span class="footer-anim-right"><a href="#" style="font-size:0.98rem;opacity:0.85;">Terms &amp; Conditions</a></span></li>
+
+      <!-- Col 4 -->
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>+250 788 309 931</div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div><a href="mailto:nkfelicien@gmail.com" style="color:inherit; text-decoration:none;">nkfelicien@gmail.com</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>Kigali, Rwanda</div>
+        </div>
+        <ul class="footer-links" style="margin-top: 1rem; flex-direction: row; gap: 1rem;">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-social" style="display:flex;justify-content:flex-end;gap:1.1rem;margin-bottom:0.2rem;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="480">
-      <span class="footer-social-label">Social Media</span>
-      <a href="https://www.facebook.com/accesstransportltdrwanda/" aria-label="Facebook" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-       <a href="https://x.com/AccessTranspor3" aria-label="Twitter" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.linkedin.com/posts/access-transport-co-rwanda-731a60231_hello-rwanda-access-transport-company-came-activity-6912707920904249344-ioZ4" aria-label="LinkedIn" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.instagram.com/accesstransportcompany/" aria-label="Instagram" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/250788309931?text=Hello%20Access%20Transport%20Company%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.%20Service%20needed%3A%20" aria-label="WhatsApp" style="color:#fff;font-size:1.25rem;" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <div class="footer-bottom" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">
-      &copy; Access Transport Company.
+
+    <div class="footer-bottom">
+      <div class="copyright">&copy; <span id="copyright-year">2026</span> Access Transport Company. All rights reserved.</div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/accesstransportltdrwanda/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://x.com/AccessTranspor3" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/accesstransportcompany/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/250788309931" target="_blank" class="footer-social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts in order -->
+  <!-- AOS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- Interactive Logic -->
   <script>
-    AOS.init({ once: false });
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    AOS.init({
+      once: false,
+      duration: 800,
+      easing: 'ease-out-cubic'
+    });
+
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scroll-progress').style.width = scrolled + '%';
+    });
+
+    const menuBtn = document.getElementById('menu-btn');
+    const navPanel = document.getElementById('nav-panel');
+    const overlay = document.getElementById('panel-overlay');
+
+    function toggleMenu() {
+      menuBtn.classList.toggle('active');
+      navPanel.classList.toggle('active');
+      overlay.classList.toggle('active');
+      
+      if (navPanel.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    document.querySelectorAll('.panel-item a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navPanel.classList.contains('active')) {
+          toggleMenu();
+        }
+      });
+    });
+
+    const revealCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+    const revealObserver = new IntersectionObserver(revealCallback, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+    document.querySelectorAll('.reveal-element').forEach(el => {
+      revealObserver.observe(el);
+    });
   </script>
-<script> const footer = document.querySelector('.main-footer'); const footerObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { footer.classList.add('footer-visible'); } else { footer.classList.remove('footer-visible'); } }); }, { threshold: 0.1 }); footerObserver.observe(footer); </script>
 </body>
 </html>
