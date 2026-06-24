@@ -232,17 +232,20 @@ p {
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .brand-title {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.6rem;
+  font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.04em;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  white-space: nowrap;
 }
 
 .brand-title span.navy {
-  color: var(--brand-navy);
+  color: #0a2472;
 }
 
 .brand-title span.green {
@@ -252,24 +255,35 @@ p {
 .brand-tagline-container {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: 0.1rem;
+  margin-top: 0.18rem;
 }
 
-.brand-line {
-  height: 1px;
-  background-color: rgba(10, 36, 114, 0.3);
-  flex-grow: 1;
-  min-width: 10px;
+.brand-line:first-child {
+  display: inline-block;
+  height: 2px;
+  width: 192px;
+  background: #5E9330;
+  border-radius: 1px;
+  margin-right: 0.5rem;
+}
+
+.brand-line:last-child {
+  display: inline-block;
+  height: 2px;
+  width: 40px;
+  background: #5E9330;
+  border-radius: 1px;
+  margin-left: 0.5rem;
 }
 
 .brand-tagline {
-  font-size: 0.65rem;
-  font-weight: 600;
-  font-style: italic;
-  color: var(--brand-navy);
-  letter-spacing: 0.05em;
+  color: #0a2472;
+  font-size: 12.5px;
+  font-weight: 400;
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  letter-spacing: 0.1px;
   white-space: nowrap;
+  font-style: italic;
 }
 
 /* Hamburger menu */
@@ -330,7 +344,7 @@ p {
   position: fixed;
   top: 0;
   right: -400px;
-  width: 100%;
+  width: 20%;
   max-width: 400px;
   height: 100%;
   background-color: var(--bg-white);
@@ -356,7 +370,7 @@ p {
 }
 
 .panel-item a {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--brand-navy);
   text-decoration: none;
